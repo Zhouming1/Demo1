@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="play.html">
+    关卡<span>1</span>
+</a>
+</body>
+</html>
+<script>
+    var l = parseInt(window.location.href.split("#")[1]);
+    var span = document.getElementsByTagName("span")[0];
+    var a = document.getElementsByTagName("a")[0];
+    if (l) {
+        if (l === 7) {
+            l = 0;
+        }
+        span.innerHTML = l + 1;
+        a.setAttribute("href", "./play.html#" + l);
+    }
+</script>
